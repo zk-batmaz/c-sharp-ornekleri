@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp7
+{
+    class Program
+    {
+        static void Main()
+        {
+            long sayı, kalan=0;
+            Console.Write("Bir sayı giriniz: ");
+            sayı = Convert.ToInt64(Console.ReadLine());
+
+            for (int i = 2; i < sayı; i++)
+            {
+                if (sayı % i == 0)
+                {
+                    Console.WriteLine("{0} {1} sayısına bölünür asal değildir.", sayı, i);
+                    kalan++;
+                }
+            }
+            if (kalan == 0)
+            {
+                Console.WriteLine("{0} sayısı asaldır.", sayı);
+            }
+            Console.ReadKey();
+            
+        }
+    }
+}
