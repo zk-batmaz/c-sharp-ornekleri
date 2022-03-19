@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main()
+        {
+            int araç, saat;
+            double toplam, zam;
+
+            Console.WriteLine("Araç türünü seçiniz");
+            Console.WriteLine("1. Taksi");
+            Console.WriteLine("2. Minibüs");
+            Console.WriteLine("3. Ticari Araç");
+            araç = Convert.ToInt32(Console.ReadLine());
+
+            if (araç == 1)
+            {
+                toplam = 5;
+                Console.WriteLine("Saati giriniz:");
+                saat = Convert.ToInt32(Console.ReadLine());
+                for (int i = 0; i < saat - 1; i++)
+                {
+                    toplam = toplam + toplam + (toplam / 5);
+                }
+                Console.WriteLine("Ödemeniz gereken tutar: {0}", toplam);
+            }
+            else if (araç == 2)
+            {
+                toplam = 6;
+                Console.WriteLine("Saati giriniz:");
+                saat = Convert.ToInt32(Console.ReadLine());
+                for (int i = 0; i < saat - 1; i++)
+                {
+                    toplam = toplam + toplam + (toplam / 100 * 22);
+                }
+                Console.WriteLine("Ödemeniz gereken tutar: {0}", toplam);
+            }
+            else if (araç == 3)
+            {
+                toplam = 6.5;
+                Console.WriteLine("Saati giriniz:");
+                saat = Convert.ToInt32(Console.ReadLine());
+                for (int i = 0; i < saat - 1; i++)
+                {
+                    toplam = toplam + toplam + (toplam / 4);
+                }
+                Console.WriteLine("Ödemeniz gereken tutar: {0}", toplam);
+            }
+            else
+                Console.WriteLine("Hatalı giriş yaptınız program kapanıyor!");
+            
+            Console.ReadKey();
+        }
+    }
+}
