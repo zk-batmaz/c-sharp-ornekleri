@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*  1 den istenen bir tam sayıya kadar olan sayıların;
+a) Toplamını,
+b) Kareleri toplamını bulduran bir programı C# programlama dili ile yazınız. */
+
 namespace ConsoleApp13
 {
     class Program
