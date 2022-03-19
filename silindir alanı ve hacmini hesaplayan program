@@ -4,6 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/* . Bir silindirin alanını ve hacmini hesaplamak için kullanıcıdan taban yarıçapı ve 
+yükseklik bilgileri alınıyor. Silindirin alanını ve hacmini fonksiyonlar yardımı ile 
+hesaplayarak bu değerleri hem double hem de integer olarak ekrana yazdıran program 
+kodunu C# programa dili ile yazınız (π=3,14).
+Tanımlanması beklenen fonksiyonlar:
+double Hacim(int pi, int r, int h){} 
+double Alan(int pi, int r, int h){} */
+
 namespace ConsoleApp11
 {
     class Program
