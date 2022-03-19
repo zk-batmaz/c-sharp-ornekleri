@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Birinci sayiyi giriniz: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ikinci sayiyi giriniz: ");
+            int y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Islemi seciniz: + - / *");
+            int z = Convert.ToChar(Console.ReadLine());
+
+            switch(z)
+            {
+                case '+' :
+                    int toplam = x + y;
+                    Console.WriteLine("Toplam: {0}", toplam);
+                    break;
+                case '-':
+                    int fark = x - y;
+                    Console.WriteLine("Fark: {0}", fark);
+                    break;
+                case '/':
+                    int bölüm = x / y;
+                    Console.WriteLine("Bolum: {0}", bölüm);
+                    break;
+                case '*':
+                    int çarpım = x * y;
+                    Console.WriteLine("Carpım: {0}", çarpım);
+                    break;
+
+            }
+            Console.ReadKey();
+
+        }
+    }
+}
