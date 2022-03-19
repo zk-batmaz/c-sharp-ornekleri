@@ -1,0 +1,83 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main()
+        {
+            int sayi1, sayi2, puan = 0, dcevap = 0, soru = 0, pas = 3;
+            char islem;
+
+            do
+            {
+                Random r = new Random();
+                sayi1 = r.Next(100);
+                sayi2 = r.Next(100);
+
+                Console.WriteLine("{0} + {1} =?", sayi1, sayi2);
+
+                int toplam = sayi1 + sayi2;
+                int cevap;
+
+                Console.WriteLine("Toplama işleminin sonucunu giriniz. Pas geçmek için 200 giriniz.");
+                cevap = Convert.ToInt32(Console.ReadLine());
+                if (cevap == 200)
+                {
+                    if (pas == 0)
+                    {
+                        Console.WriteLine("Pas hakkınız kalmamıştır!");
+                        Console.WriteLine("{0} + {1} =?", sayi1, sayi2);
+                        cevap = Convert.ToInt32(Console.ReadLine());
+                        if (toplam == cevap)
+                        {
+                            puan = puan + 2;
+                            dcevap++;
+                            soru++;
+                            Console.WriteLine("Cevabınız doğrudur.");
+                        }
+                        else
+                        {
+                            puan = puan - 1;
+                            soru++;
+                            Console.WriteLine("Cevabınız yanlıştır. Doğru cevap: {0}", toplam);
+                        }
+                    }
+                    else
+                    {
+                        pas--;
+                        soru++;
+                        Console.WriteLine("Soruyu pas geçtiniz. Kalan pas hakkınız: {0}", pas);
+                    }
+                }
+                else
+                {
+                    if (toplam == cevap)
+                    {
+                        puan = puan + 2;
+                        dcevap++;
+                        soru++;
+                        Console.WriteLine("Cevabınız doğrudur.");
+                    }
+                    else
+                    {
+                        puan = puan - 1;
+                        soru++;
+                        Console.WriteLine("Cevabınız yanlıştır. Doğru cevap: {0}", toplam);
+                    }
+                }
+                Console.WriteLine("Toplam soru sayısı: {0}", soru);
+                Console.WriteLine("Toplam doğru sayınız: {0}", dcevap);
+                Console.WriteLine("Toplam puanınız: {0}", puan);
+                Console.WriteLine("Devam etmek için e/E'ye basınız.");
+                islem = Convert.ToChar(Console.ReadLine());
+            }
+            while (islem == 'e' || islem == 'E');
+                
+        }
+    }
+}
