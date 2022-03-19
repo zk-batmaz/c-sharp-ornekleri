@@ -4,6 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/* İkinci derece bir denklemin (𝑎𝑥^2+𝑏𝑥+𝑐=0) varsa köklerini bulan programı C# 
+programlama dili kullanarak yazınız.
+Δ=𝑏^2−4𝑎𝑐≥0 ise denklemin kökü vardır ve bu kökler 𝑥 = −𝑏±√𝑏2−4𝑎𝑐/2𝑎 formülü ile 
+hesaplanır. */
+
 namespace ConsoleApp10
 {
     class Program
