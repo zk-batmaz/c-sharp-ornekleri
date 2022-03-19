@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Birinci çalışanın maaşını giriniz");
+            int maas1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("İkinci çalışanın maaşını giriniz");
+            int maas2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Kaç aylık maaşı görmek istediğini giriniz");
+            int i = Convert.ToInt32(Console.ReadLine());
+
+            for (int j = 1; j <= i; j++)
+            {
+                if (j % 2 == 0)
+                {
+                    maas1 = maas1 - (maas1 / 4);
+                    maas2 = maas2 + (maas2 / 4);
+
+                    Console.WriteLine("{0}. ay Ahmet'in maaşı: {1}", j, maas1);
+                    Console.WriteLine("{0}. ay Hasan'ın maaşı: {1}", j, maas2);
+                }
+                else if (j % 2 == 1)
+                {
+                    maas1 = maas1 + (maas1 / 2);
+                    maas2 = maas2 + (maas2 / 4);
+
+                    Console.WriteLine("{0}. ay Ahmet'in maaşı: {1}", j, maas1);
+                    Console.WriteLine("{0}. ay Hasan'ın maaşı: {1}", j, maas2);
+                }
+            }
+            if (maas1 > maas2)
+            {
+                Console.WriteLine("{0}. ayda Ahmet'in maaşı Hasan'ın maaşından fazladır.", i);
+            }
+            else if (maas2 > maas1)
+            {
+                Console.WriteLine("{0}. ayda Hasan'ın maaşı Ahmet'in maaşından fazladır.", i);
+            }
+            else
+                Console.WriteLine("{0}. ayda Ahmet'le Hasan'ın maaşı eşittir.", i);
+
+            Console.ReadKey();
+        }
+    }
+}
