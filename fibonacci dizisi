@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp12
+{
+    class Program
+    {
+        static void Main()
+        {
+            int ilk_sayı = 0;
+            int ikinci_sayı = 1;
+            Console.Write("Serinin uzunluğunu giriniz: ");
+            int uzunluk = Convert.ToInt32(Console.ReadLine());
+
+            if (uzunluk == 0)
+            {
+                Console.WriteLine("Serinin elemanı bulunmamaktadır!");
+            }
+
+            for(int i = 1; i <= uzunluk; i++)
+            {
+                Console.WriteLine("{0}. {1}", i, ilk_sayı);
+                int geçici = ilk_sayı+ ikinci_sayı;
+                ilk_sayı = ikinci_sayı;
+                ikinci_sayı = geçici;
+            }
+            Console.ReadKey();
+        }
+    }
+}
