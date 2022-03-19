@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main()
+        {
+            int a, b, c;
+            double x1, x2;
+
+            Console.WriteLine("(ax^2 + bx + c = 0 denkelmi için a, b ve c değerlerini giriniz");
+            Console.Write("a = ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("b = ");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("c = ");
+            c = Convert.ToInt32(Console.ReadLine());
+            if ((b * b) - 4 * a * c < 0)
+            {
+                Console.WriteLine("girmiş olduğunuz denklemini çözen x değeri yoktur!");
+            }
+            else
+            {
+                double kök = ((b * b) - 4 * a * c);
+                kök = Math.Sqrt(kök);
+                x1 = (-b + kök) / (2 * a);
+                x2 = (-b - kök) / (2 * a);
+
+                Console.WriteLine("{0}x^2 + {1}x + {2} = 0 denklemini çözen x değerleri", a, b, c);
+                Console.WriteLine("x = {0}", -x1);
+                Console.WriteLine("x = {0}", -x2);
+            }
+            Console.ReadKey();
+        }
+    }
+}
